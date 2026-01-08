@@ -3,9 +3,13 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <header className="navbar">
-      <div className="nav-logo">SH</div>
+      {/* Left */}
+      <div className="nav-left">
+        <span className="nav-logo">SH</span>
+      </div>
 
-      <nav className="nav-menu">
+      {/* Center */}
+      <nav className="nav-center">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -13,7 +17,10 @@ const Navbar = () => {
         <a href="#contact">Contact</a>
       </nav>
 
-      <button className="nav-btn">Download CV</button>
+      {/* Right */}
+      <div className="nav-right">
+        <button className="nav-btn">Download CV</button>
+      </div>
     </header>
   );
 };
