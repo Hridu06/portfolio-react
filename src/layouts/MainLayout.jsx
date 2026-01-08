@@ -1,9 +1,10 @@
 import Home from "../pages/Home";
+import Navbar from "../components/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
     <>
-      {/* Navbar later */}
+      <Navbar />
       <Home />
     </>
   );

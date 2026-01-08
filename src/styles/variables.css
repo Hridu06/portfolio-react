@@ -1,0 +1,25 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #00c389;
+  --color-primary-dark: #00a975;
+  --color-primary-light: #e6fbf4;
+
+  /* Text Colors */
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+
+  /* Background Colors */
+  --color-bg-main: #ffffff;
+  --color-bg-light: #f9f9f9;
+  --color-bg-dark: #0f172a;
+
+  /* Border & Shadow */
+  --color-border: #e5e7eb;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}

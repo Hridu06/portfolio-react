@@ -1,0 +1,11 @@
+.hero h1 {
+  color: var(--color-text-primary);
+}
+
+.hero p {
+  color: var(--color-text-secondary);
+}
+
+.profile-circle {
+  border: 6px solid var(--color-primary);
+}
