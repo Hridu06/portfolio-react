@@ -17,11 +17,12 @@
 }
 
 .nav-logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-primary);
+  height: 40px;        
+  width: auto;
   cursor: pointer;
+  object-fit: contain;
 }
+
 
 /* CENTER */
 .nav-center {

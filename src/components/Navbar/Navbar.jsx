@@ -1,11 +1,13 @@
 import "./Navbar.css";
+import logo from "../../assets/logo.png";
+
 
 const Navbar = () => {
   return (
     <header className="navbar">
       {/* Left */}
       <div className="nav-left">
-        <span className="nav-logo">SH</span>
+        <img src={logo} alt="Hridoy Logo" className="nav-logo" />
       </div>
 
       {/* Center */}
