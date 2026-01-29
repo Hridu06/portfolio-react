@@ -1,10 +1,26 @@
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="navbar">
+    <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       {/* Left */}
       <div className="nav-left">
         <img src={logo} alt="Hridoy Logo" className="nav-logo" />
@@ -15,7 +31,7 @@ const Navbar = () => {
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#my-work">My Work</a>
         <a href="#contact">Contact</a>
       </nav>
 

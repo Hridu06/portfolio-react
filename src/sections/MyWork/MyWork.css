@@ -1,0 +1,135 @@
+.my-work {
+  padding: 100px 10%;
+  background: var(--color-bg-main);
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.work-title {
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* FILTERS */
+.work-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 2px solid var(--color-border);
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-text-secondary);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 195, 137, 0.3);
+}
+
+/* GRID */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.work-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+}
+
+.work-img-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+}
+
+.work-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 195, 137, 0.9), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+
+.work-card:hover .work-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.work-overlay h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.work-overlay span {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-filters {
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}

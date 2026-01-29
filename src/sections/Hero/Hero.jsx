@@ -4,28 +4,42 @@ import heroImage from "../../assets/hero.jpeg";
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <h5 className="hero-subtitle">Hi I'm</h5>
+      <div className="hero-container">
+        {/* LEFT CONTENT */}
+        <div className="hero-left">
+          <div className="hero-badge">Available for Work</div>
+          <h5 className="hero-subtitle">Hi, I'm</h5>
 
-        <h1 className="hero-title">
-          Sabbir Hossain <br /> Hridoy
-        </h1>
+          <h1 className="hero-title">
+            <span className="text-gradient">Sabbir Hossain</span> <br /> 
+            <span className="text-outline">Hridoy</span>
+          </h1>
 
-        <p className="hero-desc">
-          I'm a React developer focused on building component-driven,
-          responsive user interfaces using React, Hooks, and modern JavaScript.
-          I have 1+ years of experience creating accessible, performant web
-          applications and enjoy working with HTML and CSS alongside React.
-        </p>
+          <p className="hero-desc">
+            I am a frontend developer, I have 1+ years of experience as a
+            developer and I love working with HTML and CSS.
+          </p>
 
-        <button className="hero-btn">Contact Me</button>
-      </div>
+          <div className="hero-actions">
+            <button className="hero-btn primary">Contact Me</button>
+            <button className="hero-btn secondary">View Portfolio</button>
+          </div>
+        </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="hero-right">
-        <div className="hero-image-wrapper">
-          <img src={heroImage} alt="Profile" />
+        {/* RIGHT IMAGE */}
+        <div className="hero-right">
+          <div className="hero-visual">
+            <div className="hero-blob"></div>
+            <div className="hero-image-wrapper">
+              <img src={heroImage} alt="Profile" />
+            </div>
+            {/* Floating Tags */}
+            <div className="tech-tag tag-1">React</div>
+            <div className="tech-tag tag-2">UI/UX</div>
+            <div className="tech-tag tag-3">.NET</div>
+            <div className="tech-tag tag-4">SQL Server</div>
+            <div className="tech-tag tag-5">C#</div>
+          </div>
         </div>
       </div>
     </section>
