@@ -21,8 +21,8 @@ const Hero = () => {
           </p>
 
           <div className="hero-actions">
-            <button className="hero-btn primary">Contact Me</button>
-            <button className="hero-btn secondary">View Portfolio</button>
+            <button className="hero-btn primary">Hire Me</button>
+            <button className="hero-btn secondary">Download CV</button>
           </div>
         </div>
 
@@ -30,6 +30,7 @@ const Hero = () => {
         <div className="hero-right">
           <div className="hero-visual">
             <div className="hero-blob"></div>
+            <div className="hero-shape-layer"></div>
             <div className="hero-image-wrapper">
               <img src={heroImage} alt="Profile" />
             </div>
