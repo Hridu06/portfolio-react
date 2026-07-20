@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import cvFile from "../../assets/Sabbir Hossain Hridoy ATS CV.pdf";
 
 
 const Navbar = () => {
@@ -37,7 +38,9 @@ const Navbar = () => {
 
       {/* Right */}
       <div className="nav-right">
-        <button className="nav-btn">Download CV</button>
+        <a className="nav-btn" href={cvFile} download>
+          Download CV
+        </a>
       </div>
     </header>
   );

@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImage from "../../assets/hero.png";
+import cvFile from "../../assets/Sabbir Hossain Hridoy ATS CV.pdf";
 
 const Hero = () => {
   return (
@@ -16,13 +17,16 @@ const Hero = () => {
           </h1>
 
           <p className="hero-desc">
-            I am a frontend developer, I have 1+ years of experience as a
-            developer and I love working with HTML and CSS.
+            I am a Software Engineer with over 1 years of experience in designing and developing user-focused web applications. I work with JavaScript, React, C#, and .NET, with a strong interest in UI/UX design.
           </p>
 
           <div className="hero-actions">
-            <button className="hero-btn primary">Hire Me</button>
-            <button className="hero-btn secondary">Download CV</button>
+            <a className="hero-btn primary" href="mailto:sabbirhossainhridoy06@gmail.com?subject=Hiring%20Inquiry">
+              Hire Me
+            </a>
+            <a className="hero-btn secondary" href={cvFile} download>
+              Download CV
+            </a>
           </div>
         </div>
 
