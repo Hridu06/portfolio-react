@@ -4,16 +4,22 @@ import "./MyWork.css";
 const MyWork = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "ASP.NET Core", "React", "Javascript", "HTML&CSS", "UIUX"];
+  const filters = ["All", "ASP.NET Core", "React", "Javascript", "UIUX"];
+
+  const createPlaceholder = (label) => {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="100%" height="100%" fill="#e6fbf4"/><text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#007755">${label}</text></svg>`;
+    return `data:image/svg+xml;base64,${btoa(svg)}`;
+  };
 
   // Placeholder projects
   const projects = [
-    { id: 1, title: "Project One", category: "React", img: "https://via.placeholder.com/400x300" },
-    { id: 2, title: "Project Two", category: "ASP.NET Core", img: "https://via.placeholder.com/400x300" },
-    { id: 3, title: "Project Three", category: "Javascript", img: "https://via.placeholder.com/400x300" },
-    { id: 4, title: "Project Four", category: "UIUX", img: "https://via.placeholder.com/400x300" },
-    { id: 5, title: "Project Five", category: "HTML&CSS", img: "https://via.placeholder.com/400x300" },
-    { id: 6, title: "Project Six", category: "React", img: "https://via.placeholder.com/400x300" },
+    { id: 1, title: "DSK", category: "ASP.NET Core", img: createPlaceholder("DSK") },
+    { id: 2, title: "BTS", category: "ASP.NET Core", img: createPlaceholder("BTS") },
+    { id: 3, title: "DSK", category: "React", img: createPlaceholder("DSK") },
+    { id: 4, title: "BTS", category: "React", img: createPlaceholder("BTS") },
+    { id: 5, title: "UrbanStep", category: "React", img: createPlaceholder("UrbanStep") },
+    { id: 6, title: "Calculator", category: "Javascript", img: createPlaceholder("Calculator") },
+    { id: 7, title: "Project Four", category: "UIUX", img: createPlaceholder("UIUX") },
   ];
 
   const filteredProjects = activeFilter === "All" 

@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import "./About.css";
 import aboutSmall from "../../assets/about-small.jpg";
 import aboutLarge from "../../assets/iubat.jpg";
+import iesImage from "../../assets/ies.jpg";
 import heroImage from "../../assets/hero.png";
 
 const About = () => {
-  const images = [aboutLarge, heroImage, aboutSmall];
+  const images = [aboutLarge, iesImage, heroImage];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -30,10 +31,7 @@ const About = () => {
           </div>
 
           <p className="about-desc">
-            I’m a React developer focused on building clean, scalable,
-            and user-friendly interfaces. I enjoy turning complex
-            problems into simple, beautiful designs. My approach combines 
-            technical precision with creative problem-solving.
+            I’m Sabbir Hossain Hridoy. A Software Engineer with over 1.5 years of experience in designing and developing web applications. I work with JavaScript, React, C#, and .NET, and UI/UX design.
           </p>
 
           <div className="about-signature">Sabbir Hossain Hridoy</div>
@@ -41,8 +39,6 @@ const About = () => {
           <div className="about-short-img-wrapper">
             <img src={aboutSmall} alt="Short Profile" className="about-short-img" />
           </div>
-
-          <button className="about-btn">Contact Me!</button>
         </div>
 
         {/* COLUMN 2: EDUCATION */}
@@ -64,9 +60,9 @@ const About = () => {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <span className="edu-year">2022 – Present</span>
-                  <p className="edu-degree">Bachelor of Computer Science</p>
-                  <small className="edu-school">IUBAT - International University</small>
+                  <span className="edu-year">2022 – 2025</span>
+                  <p className="edu-degree">Bachelor of Computer Science & Engineering</p>
+                  <small className="edu-school">IUBAT - International University of Business Agriculture and Technology</small>
                 </div>
               </div>
               <div className="timeline-item">
@@ -80,7 +76,7 @@ const About = () => {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <span className="edu-year">2016 – 2018</span>
+                  <span className="edu-year">2018</span>
                   <p className="edu-degree">Secondary School Certificate in Science</p>
                   <small className="edu-school">Kalia Ramnagar High School</small>
                 </div>
