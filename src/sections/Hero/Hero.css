@@ -143,29 +143,6 @@
   opacity: 0.3;
 }
 
-.hero-shape-layer {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border: 2px dashed var(--color-primary);
-  border-radius: 50%;
-  animation: rotate 20s linear infinite;
-  z-index: -1;
-  opacity: 0.4;
-}
-
-.hero-shape-layer::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 20px var(--color-primary);
-}
 
 .hero-image-wrapper {
   width: 380px;

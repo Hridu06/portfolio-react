@@ -30,7 +30,6 @@ const Hero = () => {
         <div className="hero-right">
           <div className="hero-visual">
             <div className="hero-blob"></div>
-            <div className="hero-shape-layer"></div>
             <div className="hero-image-wrapper">
               <img src={heroImage} alt="Profile" />
             </div>
