@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./About.css";
 import aboutSmall from "../../assets/about-small.jpg";
 import aboutLarge from "../../assets/iubat.jpg";
-import heroImage from "../../assets/hero.jpeg";
+import heroImage from "../../assets/hero.png";
 
 const About = () => {
   const images = [aboutLarge, heroImage, aboutSmall];
