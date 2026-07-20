@@ -2,10 +2,36 @@
   min-height: calc(100vh - 77px); /* Subtracting approximate navbar height */
   display: flex;
   align-items: center;
-  background: var(--color-bg-main);
+  background: linear-gradient(135deg, #e6fbf4 0%, #d7f7ec 35%, #f8fff9 100%);
   padding: 40px 10%;
   overflow: hidden;
   position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 380px;
+  height: 380px;
+  top: -80px;
+  right: 8%;
+  background: rgba(0, 195, 137, 0.18);
+}
+
+.hero::after {
+  width: 260px;
+  height: 260px;
+  bottom: -80px;
+  left: 10%;
+  background: rgba(16, 185, 129, 0.16);
 }
 
 .hero-container {
@@ -47,22 +73,36 @@
 .hero-title {
   font-size: clamp(40px, 8vw, 72px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
   margin-bottom: 24px;
   color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, var(--color-primary), #2d3436);
+.hero-name {
+  background: linear-gradient(90deg, var(--color-primary), #007755);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
-.text-outline {
-  -webkit-text-stroke: 1px var(--color-text-primary);
-  color: transparent;
-  opacity: 0.3;
+.hero-alias {
+  font-size: 0.85em;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--color-primary), #007755);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 1;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.15;
 }
 
 .hero-desc {

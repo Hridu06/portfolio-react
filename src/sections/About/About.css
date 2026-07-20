@@ -2,7 +2,7 @@
 
 .about {
   padding: 120px 10%;
-  background: var(--color-bg-main);
+  background: var(--color-bg-alt);
   position: relative;
   overflow: hidden;
 }

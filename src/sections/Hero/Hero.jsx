@@ -11,8 +11,8 @@ const Hero = () => {
           <h5 className="hero-subtitle">Hi, I'm</h5>
 
           <h1 className="hero-title">
-            <span className="text-gradient">Sabbir Hossain</span> <br /> 
-            <span className="text-outline">Hridoy</span>
+            <span className="hero-name">Sabbir Hossain</span>
+            <span className="hero-alias">Hridoy</span>
           </h1>
 
           <p className="hero-desc">
