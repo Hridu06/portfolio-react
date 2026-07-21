@@ -20,9 +20,11 @@ const MyWork = () => {
     { id: 7, title: "Project Four", category: "UIUX", img: DSK },
   ];
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeFilter);
+  const filteredProjects = activeFilter === "All"
+    ? projects.filter((project, index, self) =>
+        index === self.findIndex((p) => p.img === project.img)
+      )
+    : projects.filter((p) => p.category === activeFilter);
 
   return (
     <section className="my-work" id="my-work">

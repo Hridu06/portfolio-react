@@ -33,8 +33,6 @@ const About = () => {
           <p className="about-desc">
             I’m Sabbir Hossain Hridoy. A Software Engineer with over 1.5 years of experience in designing and developing web applications. I work with JavaScript, React, C#, and .NET, and UI/UX design.
           </p>
-
-          <div className="about-signature">Sabbir Hossain Hridoy</div>
           
           <div className="about-short-img-wrapper">
             <img src={aboutSmall} alt="Short Profile" className="about-short-img" />
