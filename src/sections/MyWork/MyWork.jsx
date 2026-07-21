@@ -1,25 +1,23 @@
 import { useState } from "react";
 import "./MyWork.css";
+import DSK from "../../assets/DSK.png";
+import BTS from "../../assets/BTS.png";
+import UrbanStep from "../../assets/UrbanStep.png";
+import Calculator from "../../assets/Calculator.png";
 
 const MyWork = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filters = ["All", "ASP.NET Core", "React", "Javascript", "UIUX"];
 
-  const createPlaceholder = (label) => {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="100%" height="100%" fill="#e6fbf4"/><text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#007755">${label}</text></svg>`;
-    return `data:image/svg+xml;base64,${btoa(svg)}`;
-  };
-
-  // Placeholder projects
   const projects = [
-    { id: 1, title: "DSK", category: "ASP.NET Core", img: createPlaceholder("DSK") },
-    { id: 2, title: "BTS", category: "ASP.NET Core", img: createPlaceholder("BTS") },
-    { id: 3, title: "DSK", category: "React", img: createPlaceholder("DSK") },
-    { id: 4, title: "BTS", category: "React", img: createPlaceholder("BTS") },
-    { id: 5, title: "UrbanStep", category: "React", img: createPlaceholder("UrbanStep") },
-    { id: 6, title: "Calculator", category: "Javascript", img: createPlaceholder("Calculator") },
-    { id: 7, title: "Project Four", category: "UIUX", img: createPlaceholder("UIUX") },
+    { id: 1, title: "DSK", category: "ASP.NET Core", img: DSK },
+    { id: 2, title: "BTS", category: "ASP.NET Core", img: BTS },
+    { id: 3, title: "DSK", category: "React", img: DSK },
+    { id: 4, title: "BTS", category: "React", img: BTS },
+    { id: 5, title: "UrbanStep", category: "React", img: UrbanStep },
+    { id: 6, title: "Calculator", category: "Javascript", img: Calculator },
+    { id: 7, title: "Project Four", category: "UIUX", img: DSK },
   ];
 
   const filteredProjects = activeFilter === "All" 
