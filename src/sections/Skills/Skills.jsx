@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Skills.css";
-import orgImage from "../../assets/iubat.jpg"; // Using this as a placeholder
+import orgImage from "../../assets/nanosoft.jpg";
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("skills");
@@ -17,10 +17,10 @@ const Skills = () => {
   ];
 
   const experienceData = {
-    organization: "International University of Business Agriculture & Technology",
-    designation: "Software Developer",
-    duration: "2022 - Present",
-    description: "Working on building modern web applications, focusing on both frontend and backend technologies like React, .NET, and SQL Server."
+    organization: "Nanosoft, Badda",
+    designation: "Software Engineer (.NET)",
+    duration: "June 2025 – Present",
+    description: "Serving as a full-time .NET Software Engineer on enterprise-grade solutions including DSK Bangladesh and BTS. Responsibilities include developing and maintaining ASP.NET Core Web API applications, integrating React frontends with backend services, implementing database-driven business logic with Microsoft SQL Server and Dapper, and applying OOP, Clean Architecture, and SDLC best practices to deliver scalable, maintainable software."
   };
 
   return (

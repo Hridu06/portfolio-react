@@ -17,7 +17,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero-desc">
-            I am a Software Engineer with over 1 years of experience in designing and developing user-focused web applications. I work with JavaScript, React, C#, and .NET, with a strong interest in UI/UX design.
+            I am a full-time .NET Software Engineer with over 1 years of experience in designing and developing user-focused web applications. I work with JavaScript, React, C#, and .NET, with a strong interest in UI/UX design.
           </p>
 
           <div className="hero-actions">
