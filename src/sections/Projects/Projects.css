@@ -133,6 +133,17 @@
   transform: translateY(-1px);
 }
 
+.project-links .private-link {
+  background: #64748b;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.project-links .private-link:hover {
+  background: #64748b;
+  transform: none;
+}
+
 .project-list {
   display: grid;
   gap: 14px;

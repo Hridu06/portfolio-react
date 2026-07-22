@@ -3,8 +3,7 @@ import "./Projects.css";
 import DSK from "../../assets/DSK.png";
 import BTS from "../../assets/BTS.png";
 import UrbanStep from "../../assets/UrbanStep.png";
-import HeroSection from "../../assets/Hero Section.jpg";
-import UiUxPortfolio from "../../assets/uiux portfolio.png";
+import Foodie from "../../assets/Foodie.jpg";
 
 const Projects = () => {
   const projects = [
@@ -14,9 +13,9 @@ const Projects = () => {
       category: "ASP.NET Core",
       img: DSK,
       description: "A professional enterprise-style web platform built to structure business workflows and present key information clearly.",
-      techStack: ["ASP.NET Core", "C#", "SQL", "Bootstrap"],
-      liveDemo: "#",
-      github: "#",
+      techStack: ["C#", "ASP.NET Core", "Dapper", "React", "SQL Server"],
+      liveDemo: "https://dsk.nanoit.biz/",
+      github: "private",
     },
     {
       id: 2,
@@ -24,9 +23,9 @@ const Projects = () => {
       category: "ASP.NET Core",
       img: BTS,
       description: "A structured internal dashboard concept focused on visibility, usability, and streamlined operational performance.",
-      techStack: ["ASP.NET Core", "C#", "Entity Framework", "HTML/CSS"],
-      liveDemo: "#",
-      github: "#",
+      techStack: ["C#", "ASP.NET Core",  "Dapper", "React", "SQL Server" ],
+      liveDemo: "https://bts.nanoit.biz/",
+      github: "private",
     },
     {
       id: 3,
@@ -34,29 +33,19 @@ const Projects = () => {
       category: "React",
       img: UrbanStep,
       description: "A modern landing page concept designed to communicate product value with clean storytelling and polished interface hierarchy.",
-      techStack: ["React", "JavaScript", "CSS", "UX Strategy"],
+      techStack: ["React", "JavaScript", "UX Strategy"],
       liveDemo: "#",
-      github: "#",
+      github: "https://github.com/Hridu06/Urban-Step",
     },
     {
       id: 4,
-      title: "Hero Section",
+      title: "Foodie",
       category: "UIUX",
-      img: HeroSection,
-      description: "A hero section design aimed at clear brand presentation, visual hierarchy, and stronger first impressions.",
-      techStack: ["UIUX", "Figma", "Layout Design", "Wireframe"],
-      liveDemo: "#",
-      github: "#",
-    },
-    {
-      id: 5,
-      title: "UIUX Portfolio",
-      category: "UIUX",
-      img: UiUxPortfolio,
-      description: "A clean UI portfolio concept focusing on polished typography, balanced spacing, and professional card-based layouts.",
-      techStack: ["UIUX", "Design Systems", "Responsive Layout", "Prototype"],
-      liveDemo: "#",
-      github: "#",
+      img: Foodie,
+      description: "A mobile-first food discovery concept focused on intuitive browsing, elegant content hierarchy, and a delightful user experience.",
+      techStack: ["UIUX", "Figma", "Mobile Design", "Prototype"],
+      liveDemo: "https://dribbble.com/Hriduu-6",
+      
     },
   ];
 
@@ -100,12 +89,20 @@ const Projects = () => {
               </div>
 
               <div className="project-links">
-                <a href={selectedProject.liveDemo} target="_blank" rel="noreferrer">
-                  Live Demo
-                </a>
-                <a href={selectedProject.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
+                {selectedProject.liveDemo ? (
+                  <a href={selectedProject.liveDemo} target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                ) : null}
+                {selectedProject.github === "private" ? (
+                  <a href="#" className="private-link" aria-disabled="true">
+                    GitHub Private
+                  </a>
+                ) : selectedProject.github && selectedProject.github !== "#" ? (
+                  <a href={selectedProject.github} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                ) : null}
               </div>
             </div>
           </article>

@@ -5,6 +5,7 @@ import BTS from "../../assets/BTS.png";
 import UrbanStep from "../../assets/UrbanStep.png";
 import HeroSection from "../../assets/Hero Section.jpg";
 import UiUxPortfolio from "../../assets/uiux portfolio.png";
+import Foodie from "../../assets/Foodie.jpg";
 
 const MyWork = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -65,7 +66,17 @@ const MyWork = () => {
     },
     {
       id: 6,
-      title: "Hero Section",
+      title: "Foodie",
+      category: "UIUX",
+      img: Foodie,
+      description: "A mobile-first food discovery concept focused on intuitive browsing, elegant content hierarchy, and a delightful user experience.",
+      techStack: ["UIUX", "Figma", "Mobile Design", "Prototype"],
+      liveDemo: "#",
+      github: "#",
+    },
+    {
+      id: 7,
+      title: "Smiley",
       category: "UIUX",
       img: HeroSection,
       description: "A hero layout concept that emphasizes visual hierarchy, branding, and a strong first impression.",
@@ -74,7 +85,7 @@ const MyWork = () => {
       github: "#",
     },
     {
-      id: 7,
+      id: 8,
       title: "UIUX Portfolio",
       category: "UIUX",
       img: UiUxPortfolio,
