@@ -57,7 +57,11 @@ const Contact = () => {
           {/* Left: Contact Info */}
           <div className="contact-info">
             <div className="info-card">
-              <div className="info-icon">📍</div>
+              <div className="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+                </svg>
+              </div>
               <div className="info-text">
                 <h3>Location</h3>
                 <p>Dhaka, Bangladesh</p>
@@ -65,7 +69,11 @@ const Contact = () => {
             </div>
 
             <div className="info-card">
-              <div className="info-icon">✉️</div>
+              <div className="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 5h18v14H3V5Zm2 2v10h14V7H5Zm2.5 1.5h9v1.5h-9v-1.5Zm0 3h6v1.5h-6v-1.5Z" />
+                </svg>
+              </div>
               <div className="info-text">
                 <h3>Email</h3>
                 <p>sabbirhossainhridoy06@gmail.com</p>
@@ -73,7 +81,11 @@ const Contact = () => {
             </div>
 
             <div className="info-card">
-              <div className="info-icon">📞</div>
+              <div className="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.37 2.3.57 3.5.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.57 3.5a1 1 0 0 1-.24 1l-2.23 2.2Z" />
+                </svg>
+              </div>
               <div className="info-text">
                 <h3>Phone</h3>
                 <p>+880 1725-272987</p>
