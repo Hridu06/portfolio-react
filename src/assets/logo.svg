@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Hridoy monogram logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="104" height="104" rx="24" fill="url(#bg)" />
+  <rect x="18" y="18" width="84" height="84" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.22)" />
+
+  <path d="M36 34H48V55H72V34H84V86H72V67H48V86H36V34Z" fill="#ffffff" />
+  <path d="M47 34H58V86H47V34Z" fill="url(#accent)" opacity="0.95" />
+  <path d="M62 34H73V86H62V34Z" fill="url(#accent)" opacity="0.95" />
+</svg>

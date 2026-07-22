@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Hridoy logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="104" height="104" rx="26" fill="url(#bg)" />
+  <rect x="22" y="22" width="76" height="76" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" />
+
+  <path d="M34 34H46V56H74V34H86V86H74V67H46V86H34V34Z" fill="url(#accent)" />
+  <path d="M48 34H60V86H48V34Z" fill="#ffffff" opacity="0.86" />
+  <path d="M60 34H72V86H60V34Z" fill="#ffffff" opacity="0.86" />
+</svg>
