@@ -6,6 +6,7 @@ import cvFile from "../../assets/Sabbir Hossain Hridoy ATS CV.pdf";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +28,25 @@ const Navbar = () => {
         <img src={logo} alt="Hridoy Logo" className="nav-logo" />
       </div>
 
+      <button
+        type="button"
+        className="menu-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       {/* Center */}
-      <nav className="nav-center">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#my-work">My Work</a>
-        <a href="#contact">Contact</a>
+      <nav className={`nav-center ${isMobileMenuOpen ? "open" : ""}`}>
+        <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
+        <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+        <a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</a>
+        <a href="#my-work" onClick={() => setIsMobileMenuOpen(false)}>My Work</a>
+        <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
       </nav>
 
       {/* Right */}

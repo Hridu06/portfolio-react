@@ -41,14 +41,10 @@ const About = () => {
 
         {/* COLUMN 2: EDUCATION */}
         <div className="about-column about-middle">
-          <div className="about-info-top">
+          <div className="about-info-top about-dob-block">
             <div className="info-item">
-              <span className="info-label">Born in</span>
-              <p className="info-value">Bangladesh</p>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Experience</span>
-              <p className="info-value">1.5+ Years</p>
+              <span className="info-label">Date of Birth</span>
+              <p className="info-value">05 May, 2001</p>
             </div>
           </div>
 
@@ -87,8 +83,12 @@ const About = () => {
         <div className="about-column about-right">
           <div className="about-info-top">
             <div className="info-item">
-              <span className="info-label">Date of Birth</span>
-              <p className="info-value">05 May, 2001</p>
+              <span className="info-label">Born in</span>
+              <p className="info-value">Bangladesh</p>
+            </div>
+            <div className="info-item">
+              <span className="info-label">Experience</span>
+              <p className="info-value">1.5+ Years</p>
             </div>
           </div>
 
