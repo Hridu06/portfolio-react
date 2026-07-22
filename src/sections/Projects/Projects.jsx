@@ -1,17 +1,11 @@
-import { useState } from "react";
-import "./MyWork.css";
+import "./Projects.css";
 import DSK from "../../assets/DSK.png";
 import BTS from "../../assets/BTS.png";
 import UrbanStep from "../../assets/UrbanStep.png";
 import HeroSection from "../../assets/Hero Section.jpg";
 import UiUxPortfolio from "../../assets/uiux portfolio.png";
 
-const MyWork = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [selectedProjectId, setSelectedProjectId] = useState(1);
-
-  const filters = ["All", "ASP.NET Core", "React", "UIUX"];
-
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -85,59 +79,53 @@ const MyWork = () => {
     },
   ];
 
-  const filteredProjects = activeFilter === "All"
-    ? projects.filter((project, index, self) =>
-        index === self.findIndex((p) => p.img === project.img)
-      )
-    : projects.filter((p) => p.category === activeFilter);
-
-  const selectedProject =
-    filteredProjects.find((project) => project.id === selectedProjectId) || filteredProjects[0];
+  const [selectedProject] = projects;
 
   return (
-    <section className="my-work" id="my-work">
-      <div className="work-container">
-        <div className="work-header">
-          <span className="section-tag">Portfolio</span>
-          <h2 className="work-title">
-            My <span className="text-gradient">Work</span> & <br />
-            <span className="text-outline">Creations</span>
+    <section className="projects-section" id="projects">
+      <div className="projects-container">
+        <div className="projects-header">
+          <span className="section-tag">Projects</span>
+          <h2 className="projects-title">
+            Project <span className="text-gradient">Tour</span>
           </h2>
-
-          <div className="work-filters">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                className={`filter-btn ${activeFilter === filter ? "active" : ""}`}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
         </div>
 
-        <div className="work-grid">
-          {filteredProjects.map((project) => (
-            <div
-              className={`work-card ${selectedProject?.id === project.id ? "selected" : ""}`}
-              key={project.id}
-              onClick={() => setSelectedProjectId(project.id)}
-            >
-              <div className="work-img-wrapper">
-                <img src={project.img} alt={project.title} />
-                <div className="work-overlay">
-                  <h3>{project.title}</h3>
-                  <span>{project.category}</span>
-                </div>
+        <div className="project-tour">
+          <div className="project-tour-header">
+            <h3>{selectedProject.title}</h3>
+          </div>
+
+          <div className="project-tour-content">
+            <div className="project-tour-image">
+              <img src={selectedProject.img} alt={selectedProject.title} />
+            </div>
+
+            <div className="project-tour-details">
+              <p className="project-description">{selectedProject.description}</p>
+
+              <div className="project-tech-stack">
+                {selectedProject.techStack.map((item) => (
+                  <span key={item} className="tech-chip">
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="project-links">
+                <a href={selectedProject.liveDemo} target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+                <a href={selectedProject.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-
       </div>
     </section>
   );
 };
 
-export default MyWork;
+export default Projects;

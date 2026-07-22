@@ -46,6 +46,7 @@ const Navbar = () => {
         <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
         <a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</a>
         <a href="#my-work" onClick={() => setIsMobileMenuOpen(false)}>My Work</a>
+        <a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
         <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
       </nav>
 
