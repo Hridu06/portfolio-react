@@ -3,12 +3,13 @@ import "./MyWork.css";
 import DSK from "../../assets/DSK.png";
 import BTS from "../../assets/BTS.png";
 import UrbanStep from "../../assets/UrbanStep.png";
-import Calculator from "../../assets/Calculator.png";
+import HeroSection from "../../assets/Hero Section.jpg";
+import UiUxPortfolio from "../../assets/uiux portfolio.png";
 
 const MyWork = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "ASP.NET Core", "React", "Javascript", "UIUX"];
+  const filters = ["All", "ASP.NET Core", "React", "UIUX"];
 
   const projects = [
     { id: 1, title: "DSK", category: "ASP.NET Core", img: DSK },
@@ -16,8 +17,8 @@ const MyWork = () => {
     { id: 3, title: "DSK", category: "React", img: DSK },
     { id: 4, title: "BTS", category: "React", img: BTS },
     { id: 5, title: "UrbanStep", category: "React", img: UrbanStep },
-    { id: 6, title: "Calculator", category: "Javascript", img: Calculator },
-    { id: 7, title: "Project Four", category: "UIUX", img: DSK },
+    { id: 6, title: "Hero Section", category: "UIUX", img: HeroSection },
+    { id: 7, title: "UIUX Portfolio", category: "UIUX", img: UiUxPortfolio },
   ];
 
   const filteredProjects = activeFilter === "All"

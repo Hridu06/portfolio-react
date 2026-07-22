@@ -1,6 +1,47 @@
+import { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatusMessage("");
+    setIsSending(true);
+
+    const formData = new FormData(event.target);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sabbirhossainhridoy06@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      const result = await response.json();
+      if (response.ok) {
+        setStatusMessage("Message sent successfully. I will reply soon.");
+        event.target.reset();
+      } else {
+        setStatusMessage(
+          "Unable to send message. Please try again later."
+        );
+      }
+    } catch (error) {
+      setStatusMessage(
+        "Something went wrong. Please try again again later."
+      );
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
@@ -60,24 +101,29 @@ const Contact = () => {
 
           {/* Right: Contact Form */}
           <div className="contact-form-wrapper">
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <input type="hidden" name="_subject" value="New message from portfolio website" />
+              <input type="hidden" name="_captcha" value="false" />
               <div className="form-row">
                 <div className="form-group">
-                  <input type="text" placeholder="Your Name" required />
+                  <input type="text" name="name" placeholder="Your Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Your Email" required />
+                  <input type="email" name="email" placeholder="Your Email" required />
                 </div>
               </div>
               <div className="form-group">
-                <input type="text" placeholder="Subject" required />
+                <input type="text" name="subject" placeholder="Subject" required />
               </div>
               <div className="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
               </div>
-              <button type="submit" className="submit-btn">
-                Send Message
+              <button type="submit" className="submit-btn" disabled={isSending}>
+                {isSending ? "Sending..." : "Send Message"}
               </button>
+              {statusMessage && (
+                <p className="contact-status">{statusMessage}</p>
+              )}
             </form>
           </div>
         </div>

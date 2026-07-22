@@ -6,14 +6,14 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("skills");
 
   const skillData = [
-    { name: "React JS", level: 90 },
+    { name: "React", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: ".NET Core", level: 80 },
     { name: "C#", level: 85 },
     { name: "SQL Server", level: 75 },
-    { name: "UI/UX Design", level: 70 },
+    { name: "UI/UX Design", level: 80 },
     { name: "HTML5 & CSS3", level: 95 },
-    { name: "Frontend Development", level: 90 },
+    { name: "WordPress", level: 70 },
   ];
 
   const experienceData = {
