@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Projects.css";
 import DSK from "../../assets/DSK.png";
 import BTS from "../../assets/BTS.png";
@@ -12,7 +13,7 @@ const Projects = () => {
       title: "DSK",
       category: "ASP.NET Core",
       img: DSK,
-      description: "A business-focused web platform built to present structured data and streamline user workflows.",
+      description: "A professional enterprise-style web platform built to structure business workflows and present key information clearly.",
       techStack: ["ASP.NET Core", "C#", "SQL", "Bootstrap"],
       liveDemo: "#",
       github: "#",
@@ -22,64 +23,45 @@ const Projects = () => {
       title: "BTS",
       category: "ASP.NET Core",
       img: BTS,
-      description: "A clean and functional internal dashboard experience built for performance and task visibility.",
+      description: "A structured internal dashboard concept focused on visibility, usability, and streamlined operational performance.",
       techStack: ["ASP.NET Core", "C#", "Entity Framework", "HTML/CSS"],
       liveDemo: "#",
       github: "#",
     },
     {
       id: 3,
-      title: "DSK",
-      category: "React",
-      img: DSK,
-      description: "A responsive React interface focused on smooth navigation and a modern portfolio-style experience.",
-      techStack: ["React", "JavaScript", "CSS Modules", "Vite"],
-      liveDemo: "#",
-      github: "#",
-    },
-    {
-      id: 4,
-      title: "BTS",
-      category: "React",
-      img: BTS,
-      description: "A polished React-based product view designed with reusable UI components and modern layout patterns.",
-      techStack: ["React", "JavaScript", "Responsive Design", "UI Components"],
-      liveDemo: "#",
-      github: "#",
-    },
-    {
-      id: 5,
       title: "UrbanStep",
       category: "React",
       img: UrbanStep,
-      description: "A sleek landing and product showcase concept centered on clean storytelling and conversion flow.",
+      description: "A modern landing page concept designed to communicate product value with clean storytelling and polished interface hierarchy.",
       techStack: ["React", "JavaScript", "CSS", "UX Strategy"],
       liveDemo: "#",
       github: "#",
     },
     {
-      id: 6,
+      id: 4,
       title: "Hero Section",
       category: "UIUX",
       img: HeroSection,
-      description: "A hero layout concept that emphasizes visual hierarchy, branding, and a strong first impression.",
+      description: "A hero section design aimed at clear brand presentation, visual hierarchy, and stronger first impressions.",
       techStack: ["UIUX", "Figma", "Layout Design", "Wireframe"],
       liveDemo: "#",
       github: "#",
     },
     {
-      id: 7,
+      id: 5,
       title: "UIUX Portfolio",
       category: "UIUX",
       img: UiUxPortfolio,
-      description: "A portfolio-style UI direction focusing on clarity, modern card layouts, and concise visual storytelling.",
+      description: "A clean UI portfolio concept focusing on polished typography, balanced spacing, and professional card-based layouts.",
       techStack: ["UIUX", "Design Systems", "Responsive Layout", "Prototype"],
       liveDemo: "#",
       github: "#",
     },
   ];
 
-  const [selectedProject] = projects;
+  const [selectedProjectId, setSelectedProjectId] = useState(1);
+  const selectedProject = projects.find((project) => project.id === selectedProjectId) || projects[0];
 
   return (
     <section className="projects-section" id="projects">
@@ -87,21 +69,26 @@ const Projects = () => {
         <div className="projects-header">
           <span className="section-tag">Projects</span>
           <h2 className="projects-title">
-            Project <span className="text-gradient">Tour</span>
+            Built for <span className="text-gradient">Impact</span>
           </h2>
+          <p className="projects-subtitle">
+            A focused showcase of business applications, product concepts, and polished UI systems.
+          </p>
         </div>
 
-        <div className="project-tour">
-          <div className="project-tour-header">
-            <h3>{selectedProject.title}</h3>
-          </div>
-
-          <div className="project-tour-content">
-            <div className="project-tour-image">
+        <div className="projects-layout">
+          <article className="featured-project-card">
+            <div className="featured-project-image">
               <img src={selectedProject.img} alt={selectedProject.title} />
             </div>
 
-            <div className="project-tour-details">
+            <div className="featured-project-content">
+              <div className="featured-project-meta">
+                <span className="project-pill">{selectedProject.category}</span>
+                <span className="project-pill project-pill-outline">Case Study</span>
+              </div>
+
+              <h3>{selectedProject.title}</h3>
               <p className="project-description">{selectedProject.description}</p>
 
               <div className="project-tech-stack">
@@ -121,6 +108,26 @@ const Projects = () => {
                 </a>
               </div>
             </div>
+          </article>
+
+          <div className="project-list">
+            {projects.map((project) => (
+              <button
+                key={project.id}
+                type="button"
+                className={`project-list-item ${selectedProject.id === project.id ? "active" : ""}`}
+                onClick={() => setSelectedProjectId(project.id)}
+              >
+                <div className="project-list-thumb">
+                  <img src={project.img} alt={project.title} />
+                </div>
+
+                <div className="project-list-copy">
+                  <h4>{project.title}</h4>
+                  <span>{project.category}</span>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </div>

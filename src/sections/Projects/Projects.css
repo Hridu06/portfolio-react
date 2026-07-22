@@ -4,13 +4,13 @@
 }
 
 .projects-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .projects-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .projects-title {
@@ -18,56 +18,88 @@
   font-weight: 800;
 }
 
-.project-tour {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-soft);
+.projects-subtitle {
+  max-width: 700px;
+  margin: 16px auto 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
 }
 
-.project-tour-header h3 {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--color-text-primary);
-  margin-bottom: 20px;
-}
-
-.project-tour-content {
+.projects-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 28px;
   align-items: start;
 }
 
-.project-tour-image {
+.featured-project-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
-.project-tour-image img {
+.featured-project-image {
+  height: 340px;
+  overflow: hidden;
+}
+
+.featured-project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.project-tour-details {
+.featured-project-content {
+  padding: 28px;
+}
+
+.featured-project-meta {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.project-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 195, 137, 0.12);
+  color: var(--color-primary-dark);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-pill-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.featured-project-content h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 14px;
 }
 
 .project-description {
   color: var(--color-text-secondary);
   line-height: 1.8;
   font-size: 15px;
+  margin-bottom: 18px;
 }
 
 .project-tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .tech-chip {
@@ -89,33 +121,110 @@
   text-decoration: none;
   background: var(--color-primary);
   color: white;
-  padding: 10px 18px;
+  padding: 11px 18px;
   border-radius: 999px;
   font-weight: 700;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .project-links a:hover {
   background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.project-list {
+  display: grid;
+  gap: 14px;
+}
+
+.project-list-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 14px;
+  align-items: center;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
+}
+
+.project-list-item:hover,
+.project-list-item.active {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.project-list-thumb {
+  width: 92px;
+  height: 78px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-list-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-list-copy h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.project-list-copy span {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 @media (max-width: 992px) {
-  .project-tour-content {
+  .projects-layout {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .project-tour {
-    padding: 18px;
+  .projects-section {
+    padding: 80px 6%;
   }
 
-  .project-tour-header h3 {
-    font-size: 22px;
+  .featured-project-content {
+    padding: 20px;
+  }
+
+  .featured-project-image {
+    height: 250px;
+  }
+
+  .featured-project-content h3 {
+    font-size: 24px;
+  }
+
+  .project-links {
+    flex-direction: column;
   }
 
   .project-links a {
     width: 100%;
     text-align: center;
+  }
+
+  .project-list-item {
+    grid-template-columns: 78px 1fr;
+  }
+
+  .project-list-thumb {
+    width: 78px;
+    height: 70px;
   }
 }
