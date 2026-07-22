@@ -1,6 +1,6 @@
 .contact {
   padding: 100px 10%;
-  background: var(--color-bg-alt);
+  background: linear-gradient(180deg, #f5fbff 0%, #eaf4ff 100%);
   position: relative;
   overflow: hidden;
 }

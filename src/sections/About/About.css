@@ -2,7 +2,7 @@
 
 .about {
   padding: 120px 10%;
-  background: var(--color-bg-alt);
+  background: linear-gradient(180deg, #f9fcff 0%, #f3f8fd 100%);
   position: relative;
   overflow: hidden;
 }

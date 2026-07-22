@@ -1,6 +1,6 @@
 .skills {
   padding: 100px 10%;
-  background: var(--color-bg-main);
+  background: linear-gradient(180deg, #f4f9ff 0%, #edf5ff 100%);
   position: relative;
 }
 
