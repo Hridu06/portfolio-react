@@ -1,116 +1,57 @@
-import { useState, useEffect } from "react";
 import "./About.css";
-import aboutSmall from "../../assets/about-small.jpg";
-import aboutLarge from "../../assets/iubat.jpg";
-import iesImage from "../../assets/ies.jpg";
-import heroImage from "../../assets/hero.png";
+import aboutImage from "../../assets/About.png";
 
-const About = () => {
-  const images = [aboutLarge, iesImage, heroImage];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <section className="about" id="about">
-      <div className="about-container">
-        {/* COLUMN 1: INTRO */}
-        <div className="about-column about-left">
-          <div className="about-header">
-            <span className="section-tag">About Me</span>
-            <h2 className="about-title">
-              Developing Modern <br /> 
-              <span className="text-gradient">Full-Stack Web</span> <br />
-              <span className="text-outline">Solutions</span>
-            </h2>
-          </div>
-
-          <p className="about-desc">
-            I’m Sabbir Hossain Hridoy. A Software Engineer with over 1.5 years of experience in designing and developing web applications. I work with JavaScript, React, C#, and .NET, and UI/UX design.
-          </p>
-          
-          <div className="about-short-img-wrapper">
-            <img src={aboutSmall} alt="Short Profile" className="about-short-img" />
-          </div>
-        </div>
-
-        {/* COLUMN 2: EDUCATION */}
-        <div className="about-column about-middle">
-          <div className="about-info-top about-dob-block">
-            <div className="info-item">
-              <span className="info-label">Date of Birth</span>
-              <p className="info-value">05 May, 2001</p>
-            </div>
-          </div>
-
-          <div className="about-education">
-            <h3 className="edu-title">Education</h3>
-            <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="edu-year">2022 – 2025</span>
-                  <p className="edu-degree">Bachelor of Computer Science & Engineering</p>
-                  <small className="edu-school">IUBAT - International University of Business Agriculture and Technology</small>
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="edu-year">2018 – 2020</span>
-                  <p className="edu-degree">Higher Secondary Certificate in Science</p>
-                  <small className="edu-school">I.E.S School & College</small>
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="edu-year">2018</span>
-                  <p className="edu-degree">Secondary School Certificate in Science</p>
-                  <small className="edu-school">Kalia Ramnagar High School</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* COLUMN 3: SLIDER */}
-        <div className="about-column about-right">
-          <div className="about-info-top">
-            <div className="info-item">
-              <span className="info-label">Born in</span>
-              <p className="info-value">Bangladesh</p>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Experience</span>
-              <p className="info-value">1.5+ Years</p>
-            </div>
-          </div>
-
-          <div className="about-slider">
-            <div className="slider-wrapper">
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Slide ${index}`}
-                  className={`slider-img ${index === currentImage ? "active" : ""}`}
-                />
-              ))}
-            </div>
-            {/* Decorative Elements */}
-            <div className="deco-dots"></div>
-            <div className="deco-circle"></div>
-          </div>
-        </div>
+const About = () => (
+  <section className="about" id="about">
+    <div className="about-container">
+      <div className="about-portrait">
+        <div className="portrait-accent" aria-hidden="true"></div>
+        <img src={aboutImage} alt="Sabbir Hossain Hridoy" />
       </div>
-    </section>
-  );
-};
+
+      <div className="about-content">
+        <span className="section-tag">About me</span>
+        <h2 className="about-title">
+          Who is Sabbir Hossain?
+        </h2>
+
+        <div className="about-copy">
+          <p>
+            I&apos;m a <strong>Software Engineer</strong> who builds reliable web
+            applications with <strong>React, ASP.NET Core, C#,</strong> and{" "}
+            <strong>SQL Server</strong>. I enjoy turning complex requirements
+            into clean, user-focused digital experiences.
+          </p>
+        </div>
+
+        <dl className="about-highlights">
+          <div>
+            <dt>Years of experience</dt>
+            <dd>1.5+</dd>
+          </div>
+          <div>
+            <dt>Projects completed</dt>
+            <dd>8+</dd>
+          </div>
+          <div>
+            <dt>Core technologies</dt>
+            <dd>3+</dd>
+          </div>
+        </dl>
+
+        <div className="about-expertise" aria-label="Core expertise">
+          <span>Full-stack development</span>
+          <span>Responsive interfaces</span>
+          <span>UI/UX-minded engineering</span>
+        </div>
+
+        <a className="about-link" href="#contact">
+          Let&apos;s work together <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+);
 
 export default About;
