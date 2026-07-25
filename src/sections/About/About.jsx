@@ -1,5 +1,5 @@
 import "./About.css";
-import aboutImage from "../../assets/About.png";
+import aboutImage from "../../assets/hero.png";
 
 const About = () => (
   <section className="about" id="about">

@@ -200,19 +200,22 @@
   background: var(--color-primary);
 }
 
-@media (max-width: 760px) {
-  .about {
-    padding: 84px 7%;
-  }
-
+@media (max-width: 900px) {
   .about-container {
     grid-template-columns: 1fr;
-    gap: 58px;
+    gap: 54px;
+    max-width: 650px;
   }
 
   .about-portrait {
     width: min(100%, 400px);
     justify-self: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .about {
+    padding: 84px 7%;
   }
 }
 
