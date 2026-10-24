@@ -1,5 +1,5 @@
 import "./Hero.css";
-import heroImage from "../../assets/hero.png";
+import heroImage from "../../assets/HeroCover.png";
 import cvFile from "../../assets/Sabbir Hossain Hridoy ATS CV.pdf";
 
 const Hero = () => {
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="hero-visual">
             <div className="hero-blob"></div>
             <div className="hero-image-wrapper">
-              <img src={heroImage} alt="Profile" />
+              <img src={heroImage} alt="Sabbir Hossain Hridoy" />
             </div>
             {/* Floating Tags */}
             <div className="tech-tag tag-1">React</div>
